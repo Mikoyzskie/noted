@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Sen:wght@700&display=swap');
+
+h2, h1, h3{
+  font-family: 'Sen', sans-serif;
+  font-weight: 700;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: #444;
+  transition: all 0.2s;
+}
+
+body{
+  padding: 30px;
+  min-height: 100vh;
+  display: flex;
+  align-items: stretch;
+  font-weight: 700;
+  font-size: 15px;
+  background-color: #fafafa;
+}
+
+.sidebar-container{
+  padding: 20px;
+  background-color: #f4f4f4;
+  width: 100%;
+  max-width: 400px;
+  .sidebar-container__search{
+    .search-input{
+      all: unset;
+    }
+  }
+  .sidebar-container__content{
+    span.title{
+      font-family: 'Sen', sans-serif;
+    }
+    .content-list{
+      .content-list__item{
+        span{
+          background-color: #ebebeb;
+          padding: 5px;
+          border-radius: 5px;
+        }
+        &.active,&:hover{
+          background-color: #ebebeb;
+          span{
+            color:#fff;
+            background-color: #444;
+          }
+        }
+      }
+    }
+  }
+  
+}
