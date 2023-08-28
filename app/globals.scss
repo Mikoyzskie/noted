@@ -26,10 +26,13 @@ body{
   background-color: #fafafa;
 }
 
+//151929
+
 .sidebar-container{
   padding: 20px;
   background-color: #f4f4f4;
   width: 100%;
+  
   .sidebar-container__search{
     .search-input{
       all: unset;
@@ -58,15 +61,38 @@ body{
   }
 }
 
+
+.sticky-container__main::-webkit-scrollbar {
+  width: 10px;
+}
+
+.sticky-container__main::-webkit-scrollbar-track {
+  border-radius: 8px;
+  background-color: #e7e7e7;
+  border: 1px solid #cacaca;
+}
+
+.sticky-container__main::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background-color: #444;
+}
 .sticky-container__main{
   padding: 30px;
   flex-grow: 1;
-  
+  overflow: auto;
+  height: calc(100vh - 132px);
+    
   .sticky-container__content{
     column-gap: 30px;
     row-gap: 30px;
     .sticky-notes{
       height: 300px;
+      max-width: 300px;
+      &.add{
+        &:hover{
+          box-shadow: inset 6 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+      }
     }
   }
 }

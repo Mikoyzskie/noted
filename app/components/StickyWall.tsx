@@ -31,13 +31,8 @@ export default function StickyWall() {
                     <li className='sticky-notes p-6 rounded-md shadow-md bg-[#E6BA95]'>
                         <h3 className="sticky-notes__header text-xl font-bold">Test 1</h3>
                     </li>
-                    <li className='sticky-notes p-6 rounded-md shadow-md bg-[#ffd4a9]'>
-                        <h3 className="sticky-notes__header text-xl font-bold">Test 1</h3>
-                    </li>
-                    <li className='sticky-notes p-6 rounded-md shadow-md bg-[#ffd4a9]'>
-                        <h3 className="sticky-notes__header text-xl font-bold">Test 1</h3>
-                    </li>
-                    <li className='sticky-notes p-6 rounded-md bg-[#ebebeb] text-5xl flex justify-center items-center hover:cursor-pointer hover:shadow-inner'>
+
+                    <li className='sticky-notes add p-6 rounded-md bg-[#ebebeb] text-5xl flex justify-center items-center hover:cursor-pointer'>
                         <IoIosAdd />
                     </li>
                 </ul>

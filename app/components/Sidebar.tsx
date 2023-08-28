@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { FiSearch, FiSettings } from 'react-icons/fi';
 import { BiSolidSquareRounded } from 'react-icons/bi';
-import { MdOutlineUpcoming, MdCalendarToday, MdNote, MdAdd } from 'react-icons/md';
+import { MdOutlineUpcoming, MdCalendarToday, MdOutlineDarkMode, MdAdd } from 'react-icons/md';
 import { CgCalendarToday } from 'react-icons/cg'; PiSignOut
 import { FaRegStickyNote } from 'react-icons/fa';
 import { PiSignOut } from 'react-icons/pi';
@@ -17,9 +17,12 @@ export default function Sidebar() {
     return (
         <div className='sidebar-container rounded rounded-md sm:flex flex-col justify-between mr-10 xl:max-w-[400px] lg:max-w-[300px] md: max-w-[275px] hidden bottom-20px'>
             <div className="sidebar-container__main">
-                <div className="sidebar-container__header flex justify-between mb-4">
-                    <h3 className='text-lg'>Menu</h3>
-                    <GiHamburgerMenu className="text-xl" />
+                <div className="sidebar-container__header flex justify-between mb-4 items-center">
+                    <div className='flex items-center gap-2'>
+                        <img src="./cats/cat1.png" alt="cat avatar" height={"40px"} width={"40px"} />
+                        <h3 className='text-lg'>Hello, User!</h3>
+                    </div>
+                    <GiHamburgerMenu className="text-xl hover:cursor-pointer hover:text-2xl" />
                 </div>
                 <div className="sidebar-container__search flex items-center border p-2 rounded-lg mb-5">
                     <label htmlFor="search-input"></label>
@@ -81,6 +84,7 @@ export default function Sidebar() {
             </div>
             <div className="sidebar-container__footer">
                 <ul>
+                    <li className='py-1 hover:cursor-pointer w-fit flex items-center'><MdOutlineDarkMode className="mr-2" />Dark Mode</li>
                     <li className='py-1 hover:cursor-pointer w-fit flex items-center'><FiSettings className="mr-2" />Settings</li>
                     <li className='py-1 hover:cursor-pointer w-fit flex items-center'><PiSignOut className="mr-2" />Sign Out</li>
                 </ul>
