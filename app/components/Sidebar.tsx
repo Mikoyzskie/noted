@@ -15,7 +15,7 @@ export default function Sidebar() {
     }
 
     return (
-        <div className='sidebar-container rounded rounded-md flex flex-col justify-between mr-5'>
+        <div className='sidebar-container rounded rounded-md sm:flex flex-col justify-between mr-10 xl:max-w-[400px] lg:max-w-[300px] md: max-w-[275px] hidden bottom-20px'>
             <div className="sidebar-container__main">
                 <div className="sidebar-container__header flex justify-between mb-4">
                     <h3 className='text-lg'>Menu</h3>
@@ -43,7 +43,7 @@ export default function Sidebar() {
                         </li>
                         <li onClick={() => handleActive("calendar")} className={`content-list__item py-2 px-4 flex justify-between items-center hover:cursor-pointer rounded-md ${active == "calendar" && "active"}`}>
                             <div className="item__name flex items-center"><MdCalendarToday className="mr-2" />Calendar</div>
-
+                            <p className='text-xs'>Coming Soon...</p>
                         </li>
 
                     </ul>

@@ -30,7 +30,6 @@ body{
   padding: 20px;
   background-color: #f4f4f4;
   width: 100%;
-  max-width: 400px;
   .sidebar-container__search{
     .search-input{
       all: unset;
@@ -57,5 +56,17 @@ body{
       }
     }
   }
+}
+
+.sticky-container__main{
+  padding: 30px;
+  flex-grow: 1;
   
+  .sticky-container__content{
+    column-gap: 30px;
+    row-gap: 30px;
+    .sticky-notes{
+      height: 300px;
+    }
+  }
 }
