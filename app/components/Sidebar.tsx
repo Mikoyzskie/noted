@@ -4,12 +4,16 @@ import React, { useState } from 'react'
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { FiSearch, FiSettings } from 'react-icons/fi';
 import { BiSolidSquareRounded } from 'react-icons/bi';
-import { MdOutlineUpcoming, MdCalendarToday, MdOutlineDarkMode, MdAdd } from 'react-icons/md';
+import { MdOutlineUpcoming, MdCalendarToday, MdOutlineDarkMode, MdAdd, MdOutlineLightMode } from 'react-icons/md';
 import { CgCalendarToday } from 'react-icons/cg'; PiSignOut
 import { FaRegStickyNote } from 'react-icons/fa';
 import { PiSignOut } from 'react-icons/pi';
+import { useTheme } from 'next-themes';
+
+
 export default function Sidebar() {
     const [active, setActive] = useState('');
+    // const [theme, setTheme] = useTheme();
     function handleActive(value: string) {
         setActive(value);
     }
@@ -85,6 +89,7 @@ export default function Sidebar() {
             <div className="sidebar-container__footer">
                 <ul>
                     <li className='py-1 hover:cursor-pointer w-fit flex items-center'><MdOutlineDarkMode className="mr-2" />Dark Mode</li>
+                    <li className='py-1 hover:cursor-pointer w-fit flex items-center'><MdOutlineLightMode className="mr-2" />Light Mode</li>
                     <li className='py-1 hover:cursor-pointer w-fit flex items-center'><FiSettings className="mr-2" />Settings</li>
                     <li className='py-1 hover:cursor-pointer w-fit flex items-center'><PiSignOut className="mr-2" />Sign Out</li>
                 </ul>
